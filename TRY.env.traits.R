@@ -1,6 +1,7 @@
-library(raster)
-
 try.env.traits<-function(try_data,amb_rst){
+  if("raster" %in% rownames(installed.packages()) == FALSE) {install.packages("raster")}
+  require(raster)
+
   try_data$TraitID[is.na(try_data$TraitID)]<-0
   try_data$ObservationID[is.na(try_data$ObservationID)]<-0
   
