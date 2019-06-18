@@ -1,3 +1,6 @@
+#try_data = TRY database table as it is downloaded from the website
+#amb_rst =  raster stack (or single raster) of environmental variable to be extracted from studies in TRY database. 
+
 try.env.traits<-function(try_data,amb_rst){
   if("raster" %in% rownames(installed.packages()) == FALSE) {install.packages("raster")}
   require(raster)
